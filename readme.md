@@ -11,3 +11,5 @@ Curso de formação front end, aonde são abordados temas como:
 * TYPESCRIPT e,
   
 * REACT + TYPESCRIPT
+
+Esse curso contém 20 projetos
