@@ -1,18 +1,21 @@
 Curso de formação front end, aonde são abordados temas como:
 
-*HTML
+* HTML,
 
-*CSS
+* CSS,
 
-*JAVASCRIPT ,
+* JAVASCRIPT ,
 
-*REACT,
+* REACT,
   
-*TYPESCRIPT e,
+* TYPESCRIPT e,
   
-*REACT + TYPESCRIPT
+* REACT + TYPESCRIPT
 
 Esse curso contém 20 projetos e alguns deles se utilizaram do recurso de:
-*LOCALSTORAGE
-*BOOTSTRAP 
-*GOOGLE.FONTS
+
+* LOCALSTORAGE
+
+* BOOTSTRAP 
+
+* GOOGLE.FONTS
