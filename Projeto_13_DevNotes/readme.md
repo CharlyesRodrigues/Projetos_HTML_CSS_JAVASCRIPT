@@ -1,4 +1,4 @@
-# DevNotes
+# DevNotes 🔖
 
 Nesse projeto de bloco de desenvolvimento utilizei o  BOOTSTRAP como a biblioteca para implemantar ícones em meu projeto.
 
