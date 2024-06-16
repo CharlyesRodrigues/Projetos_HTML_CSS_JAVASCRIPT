@@ -17,7 +17,8 @@ Atráves do filtro podemos escolher tarefas que são salvas segundo sua categori
 Por meio do pesquisar digitamos parte de uma sentença de tarefa e abaixo ele nos mostra a tarefa e sua condição.
 ---
 
-Segue o link aabaixo da imagem para vocês verem como ficou o projeto.
+Segue o link abaixo da imagem para vocês verem como ficou o projeto.
+
 ![IMAGEM](./img/image.png)
 
 https://todoavancado.netlify.app
