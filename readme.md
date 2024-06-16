@@ -6,7 +6,7 @@ Curso de formação front end, aonde são abordados temas como:
 
 * JAVASCRIPT ,
 
-* REACT,
+* ![REACT](https://img.icons8.com/?size=100&id=wPohyHO_qO1a&format=png&color=000000),
   
 * TYPESCRIPT e,
   
