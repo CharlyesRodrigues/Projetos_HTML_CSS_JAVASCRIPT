@@ -18,4 +18,4 @@ Esse curso contém 20 projetos e alguns deles se utilizaram do recurso de:
 * GOOGLE.FONTS
 
 
-Eu estou na versão
+Eu estou na master
