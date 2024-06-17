@@ -18,4 +18,4 @@ Esse curso contém 20 projetos e alguns deles se utilizaram do recurso de:
 * GOOGLE.FONTS
 
 
-eu estou na versão teste
+Testango tag v2.0
