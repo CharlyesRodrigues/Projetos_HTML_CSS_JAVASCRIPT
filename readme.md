@@ -19,3 +19,4 @@ Esse curso contém 20 projetos e alguns deles se utilizaram do recurso de:
 
 
 Eu estou na master
+git 
