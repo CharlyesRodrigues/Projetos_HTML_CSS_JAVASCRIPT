@@ -18,4 +18,3 @@ Esse curso contém 20 projetos e alguns deles se utilizaram do recurso de:
 * GOOGLE.FONTS
 
 
-Verão 3
