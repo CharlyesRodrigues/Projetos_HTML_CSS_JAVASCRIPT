@@ -16,10 +16,6 @@ Esse curso contém 20 projetos e alguns deles se utilizaram do recurso de:
 * BOOTSTRAP 
 
 * GOOGLE.FONTS
-<<<<<<< HEAD
 
 
 Eu estou na versão
-=======
-Eu estou na master
->>>>>>> Charlyes-Rodrigues
