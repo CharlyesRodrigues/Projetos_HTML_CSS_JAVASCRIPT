@@ -12,4 +12,4 @@ Utilizei o localStorage para mander minhas informações salvas para teste de:
 
 * Fixação de uma nota principal.
 
-Nesse projeto também  coloquei um botão aonde será possível abaixar o PDF das notas criadas.
+Nesse projeto também  coloquei um botão aonde será possível abaixar o PDF das notas criadas...
