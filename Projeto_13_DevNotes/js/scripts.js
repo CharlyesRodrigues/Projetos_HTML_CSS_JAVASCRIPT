@@ -140,27 +140,33 @@ exportData();
 })
 /************************************************** */
 
-function exportData (){
+function exportData(){
 
-    /**Posso usar a função getNotes() no lugar do JSON*/
-    const notes =  getNotes()
+    // Recuperar os dados do localStorage
+    const notes = getNotes()
 
-    // Separa o dado por , e quebra linha com barra invertida n ou seja, \n
+    // Verificar se há dados
+    if (!notes) {
+      alert('Nenhum dado encontrado no localStorage!');
+      return;
+    }
 
-    const csvString = [
+    // Transformar os dados em um formato adequado para o Excel
+    const worksheet = XLSX.utils.json_to_sheet(notes);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
 
-        ["ID","Conteudo", "Fixado?"],
-        ...notes.map((note)=>[note.id, note.content, note.fixed]),
-    ]
-      .map((e)=> e.join(","))
-      .join("\n")
+    // Gerar arquivo Excel
+    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
 
-    const element = document.createElement("a")
-    element.href = "data:text/csv;charset=utf-8," + encodeURI(csvString)
-
-    element.target ="_blank"
-    element.download ="notes.csv"
-    element.click()
+    // Criar um blob e iniciar o download do arquivo
+    const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'notes.xlsx';
+    a.click();
+    URL.revokeObjectURL(url);
 }
 
 function toggleFixNote(id){
