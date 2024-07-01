@@ -3,6 +3,7 @@ const notesContainer = document.querySelector("#notes-container")
 const noteInput = document.querySelector("#note-content")
 const addNoteBtn = document.querySelector(".add-note")
 const searchInput = document.querySelector("#search-input")
+const exportBtn = document.querySelector("#export-notes")
 
 
 
@@ -132,6 +133,36 @@ return element
 
 }
 
+exportBtn.addEventListener("click", (e)=>{
+
+exportData();
+
+})
+/************************************************** */
+
+function exportData (){
+
+    /**Posso usar a função getNotes() no lugar do JSON*/
+    const notes =  getNotes()
+
+    // Separa o dado por , e quebra linha com barra invertida n ou seja, \n
+
+    const csvString = [
+
+        ["ID","Conteudo", "Fixado?"],
+        ...notes.map((note)=>[note.id, note.content, note.fixed]),
+    ]
+      .map((e)=> e.join(","))
+      .join("\n")
+
+    const element = document.createElement("a")
+    element.href = "data:text/csv;charset=utf-8," + encodeURI(csvString)
+
+    element.target ="_blank"
+    element.download ="notes.csv"
+    element.click()
+}
+
 function toggleFixNote(id){
 
     const notes = getNotes()
@@ -238,6 +269,9 @@ function searchNotes(search){
             return;
 
         }
+
+        cleanNotes();
+        showNotes();
     
 }
 
@@ -251,6 +285,15 @@ searchInput.addEventListener("keyup" , (e)=>{
     searchNotes(search);
 })
 
+noteInput.addEventListener("keydown" , (e)=>{
+
+if (e.key === "Enter"){
+
+    addNote();
+}
+
+})
+
 //Inicialização para dar o start na aplicação
 
-
+showNotes()
