@@ -80,32 +80,44 @@ h2{
  .reference-input p{
     margin-left: 4px;
  }
- .form-control input [type= "text"]{
+
+
+ 
+ .form-control input[type="text"]{
     height: 30px;
     width: 30px;
     margin-left: 1rem;
     text-align: center;
+    
  }
+ 
+
+ 
+ 
+ 
 
  /*Preview*/
  #box{
     width: 100%;
     height: 300px;
     background-color: #e9d60a;
+
+    
  }
  /* area de geração de regras*/
 
  #generated-rule{
     text-align: center;
+   
  }
 
  #generated-rule p {
     margin-bottom: 0.5rem;
-
+   
  }
 
 #rules-area{
-
+   
     background-color: #d3d3d3d3;
     max-width: 1000px;
     margin: 0 auto;
