@@ -90,10 +90,17 @@ h2{
     text-align: center;
     
  }
- 
+ /*Novas funcionalidades*/
+ #color-value{
 
+    min-width: 100px;
+ }
  
- 
+ #inset {
+   align-self: start;
+   width: 20px;
+   height: 20px;
+ }
  
 
  /*Preview*/
@@ -123,4 +130,37 @@ h2{
     margin: 0 auto;
     border: 2px solid #e9d60a;
     padding: 1rem;
+    transition: 0.04s;
+    cursor: pointer;
+}
+
+#rules-area:hover{
+
+    background-color: #dfdfdf;
+}
+#copy-instruction{
+
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/*Responsivo*/
+
+@media(max-width:425px){
+    #box-shadow-generator{
+        flex-direction: column;
+    }
+    #control-container,
+    #preview {
+        padding: 1rem 2rem;
+    }
+    #box{
+        width: 60%;
+        height: 200px;
+        margin: 0 auto;
+    }
+    #generated-rule{
+        margin-top: 2.5rem;
+    }
+
 }
