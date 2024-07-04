@@ -9,6 +9,11 @@ constructor(
     blurRef,
     spread,
     spreadRef,
+    color,
+    colorRef,
+    opacity,
+    opacityRef,
+    inset,
     previewBox,
     rule,
     webkitRule,
@@ -23,6 +28,11 @@ constructor(
     this.blurRef       = blurRef;
     this.spread        = spread;
     this.spreadRef     = spreadRef;
+    this.color         = color;
+    this.colorRef      = colorRef;
+    this.opacity       = opacity;
+    this.opacityRef    = opacityRef;
+    this.inset         = inset;
     this.previewBox    = previewBox;
     this.rule          = rule;
     this.webkitRule    = webkitRule;
@@ -97,6 +107,15 @@ const rule =document.querySelector("#rule span")
 const webkitRule =document.querySelector("#webkit-rule span")
 const mozRule =document.querySelector("#moz-rule span")
 
+const color = document.querySelector("#color")
+const colorRef = document.querySelector("#color-value")
+const opacity = document.querySelector("#opacity")
+const opacityRef = document.querySelector("#opacity-value")
+const inset = document.querySelector("#inset")
+
+
+
+
 
 /**Criando as classes */
 
@@ -108,6 +127,11 @@ const boxShadow = new boxShadowGenerator(
     blur,
     blurRef,
     spread,
+    color,
+    colorRef,
+    opacity,
+    opacityRef,
+    inset,
     spreadRef,
     previewBox,
     rule,
