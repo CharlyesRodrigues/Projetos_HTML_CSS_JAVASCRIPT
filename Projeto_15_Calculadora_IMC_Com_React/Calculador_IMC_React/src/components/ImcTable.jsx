@@ -6,7 +6,7 @@ const ImcTable = ({data,resultado}) => {
   
     return (
         <div id="result-container">
-            <p id="imc-number">Seu IMC: {resultado}</p>
+            <p id="imc-number">Seu IMC: <h2>{resultado}</h2></p>
             <p id="imc-info">Situação atual:</p>
             <h3>Confira as classificações:</h3>
             <div id="imc-table">
@@ -22,7 +22,7 @@ const ImcTable = ({data,resultado}) => {
                     <div className="table-data" key={item.info}>
                         <p>{item.classification}</p>
                         <p>{item.info}</p>
-                        <p>{item.obesity  }</p>
+                        <p>{item.obesity}</p>
 
                     </div>
 
