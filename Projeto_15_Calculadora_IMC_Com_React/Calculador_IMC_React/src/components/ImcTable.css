@@ -6,14 +6,19 @@
 }
 
 #imc-number{
-
+display: flex;
+flex-direction: column;
     font-size: 2.4rem;
     margin-bottom: 0.6rem;
 }
 
 
 #imc-info{
-
+    
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+      
     font-size: 1.4rem;
     color: #ccc;
 }
@@ -61,18 +66,18 @@
     align-self: center;
 }
 
-#good{
+.good{
     color: #12db34;
 }
 
-#low{
+.low{
     color: #dbce12;
 }
 
-#good{
+.medium{
     color: #db6212;
 }
 
-#good{
+.high{
     color: #db1912;
 }

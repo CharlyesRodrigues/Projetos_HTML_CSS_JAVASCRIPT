@@ -1,13 +1,19 @@
 import Button from "./Button"
 
-import "./ImcTable.css"
-const ImcTable = ({data,resultado}) => {
 
-  
+import "./ImcTable.css"
+const ImcTable = ({ data, imc, info, infoClass, resetCalc        }) => {
+
+
     return (
         <div id="result-container">
-            <p id="imc-number">Seu IMC: <h2>{resultado}</h2></p>
-            <p id="imc-info">Situação atual:</p>
+            <p id="imc-number">
+                Seu IMC 
+                <span className={infoClass}> {imc}</span>
+            </p>
+            <p id="imc-info">Situação atual:
+                <span className={infoClass}>{info}</span>
+            </p>
             <h3>Confira as classificações:</h3>
             <div id="imc-table">
 
@@ -18,7 +24,7 @@ const ImcTable = ({data,resultado}) => {
                     <h4>Obesidade  </h4>
                 </div>
 
-                {data.map((item)=>(
+                {data.map((item) => (
                     <div className="table-data" key={item.info}>
                         <p>{item.classification}</p>
                         <p>{item.info}</p>
@@ -29,7 +35,7 @@ const ImcTable = ({data,resultado}) => {
                 ))}
 
             </div>
-            <Button id="back-btn" text="Voltar" />
+            <Button id="back-btn" text="Voltar" action={resetCalc} />
 
         </div>
     )

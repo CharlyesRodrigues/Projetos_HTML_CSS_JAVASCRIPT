@@ -14,13 +14,32 @@ function App() {
     if ( !weight || !height) return;
 
     // Temos que trocar a vírgula por pontos para conseguirmos fazer a conta
+    const weightFloat = +height.replace(",","."); 
     const heightFloat = +weight.replace(",",".");
-    const weightFloat = +height.replace(",",".");    
+   
 
     const imcResults = (weightFloat / (heightFloat * heightFloat)).toFixed(1)
   
     setImc(imcResults)
+
+    data.forEach((item)=> {
+      if (imcResults >= item.min && imcResults <= item.max){
+        setInfo(item.info);
+        setInfoClass(item.infoClass);
+      }
+    
+    })
+    if (!info) return;
   }
+
+  const resetCalc =(e)=>{
+
+    e.preventDefault();
+    setImc("");
+    setInfo("");
+    setInfoClass("")
+  }
+
 
   const [imc, setImc] = useState("");
   const [info, setInfo] = useState("");
@@ -31,7 +50,14 @@ function App() {
   return (
     <div className="container">
 
-      {!imc ? (<ImcCalc  calcImc={calcImc} />) : ( <ImcTable data={data} resultado={imc}/> )} </div>
+      {!imc ? (<ImcCalc  calcImc={calcImc} />) : ( 
+        <ImcTable data={data} 
+                  imc={imc} 
+                  info={info} 
+                  infoClass={infoClass}
+                  resetCalc={resetCalc}        
+        /> )} 
+      </div>
 
 
 
