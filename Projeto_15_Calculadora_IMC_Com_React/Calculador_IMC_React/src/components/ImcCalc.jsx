@@ -1,3 +1,4 @@
+import Button from "./Button"
 import "./ImcCalc.css"
 
 export const ImcCalc = () => {
@@ -35,9 +36,8 @@ export const ImcCalc = () => {
                 {/**Abaixo temos o form  que será chamado após o prenchimento acima */}
 
                 <div className="action-control">
-                    <button>Calcular</button>
-                    <button>Limpar</button>
-
+                    <Button id="calc-btn" text ="Calcular" />
+                    <Button id="clear-btn" text ="Limpar" />
                 </div>
 
 
