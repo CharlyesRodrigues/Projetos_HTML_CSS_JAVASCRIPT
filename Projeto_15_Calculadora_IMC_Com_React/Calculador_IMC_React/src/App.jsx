@@ -9,6 +9,7 @@ function App() {
     <div className="container">
 
       <ImcCalc />
+      
 
     </div>
 
