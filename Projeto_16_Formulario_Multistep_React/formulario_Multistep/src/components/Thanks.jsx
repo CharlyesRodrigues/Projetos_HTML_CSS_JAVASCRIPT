@@ -5,7 +5,7 @@ import {
   BsFillEmojiFrownFill,
 } from "react-icons/bs";
 
-import "./Thanks.css";
+import "./Tanks.css"
 
 const emojiData = {
   unsatisfied: <BsFillEmojiFrownFill />,
